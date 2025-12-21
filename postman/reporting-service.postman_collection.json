@@ -1,0 +1,49 @@
+{
+    "info": {
+        "name": "Reporting Service",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8083"
+        }
+    ],
+    "item": [
+        {
+            "name": "Health",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/health"
+            }
+        },
+        {
+            "name": "Summary Report",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/reports/summary"
+            }
+        },
+        {
+            "name": "Asset Utilization",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/reports/assets/utilization"
+            }
+        },
+        {
+            "name": "Employee Assets",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/reports/employees/assets"
+            }
+        },
+        {
+            "name": "Assignment History",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/reports/assignments/history"
+            }
+        }
+    ]
+}

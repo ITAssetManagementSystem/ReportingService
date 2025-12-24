@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: it-reporting-ingress
+  namespace: it-reporting
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: reporting.sikshasathi.tech
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: reporting-service
+                port:
+                  number: 80

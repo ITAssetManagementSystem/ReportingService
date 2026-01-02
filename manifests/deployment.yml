@@ -25,3 +25,19 @@ spec:
               value: http://employee-service.it-employee.svc.cluster.local
             - name: ASSIGNMENT_SERVICE_URL
               value: http://assignment-service.it-assignment.svc.cluster.local
+
+          # ✅ CORRECT HEALTH CHECKS
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8083
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 3
+
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8083
+            initialDelaySeconds: 40
+            periodSeconds: 20

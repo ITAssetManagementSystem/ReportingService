@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: reporting-service
-          image: devacr231225.azurecr.io/reporting-service:v1
+          image: devacr301225.azurecr.io/reporting-service:v1
           ports:
             - containerPort: 8083
           env:

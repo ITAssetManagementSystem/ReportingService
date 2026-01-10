@@ -14,8 +14,8 @@ jobs:
     deploy:
         uses: ITAssetManagementSystem/CommonWorkflows/.github/workflows/cd-helm-aks.yml@main
         with:
-            service_name: ui-service
-            namespace: it-ui
+            service_name: reporting-service
+            namespace: it-reporting
             values_file: helm/values.yaml
             chart_version: 1.0.0
             acr_name: devacr301225

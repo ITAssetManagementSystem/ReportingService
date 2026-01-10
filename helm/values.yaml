@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: devacr301225.azurecr.io/reporting-service
-  tag: 044a226255e6890cabd643bdc3460de0c52ba554
+  tag: 90faf46429413c88c313c9e78e375e02f2b8ad07
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

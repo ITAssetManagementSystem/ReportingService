@@ -9,7 +9,7 @@ metadata:
     appgw.ingress.kubernetes.io/appgw-ssl-certificate: "wildcard-sikshasathi-tech"
 spec:
   rules:
-    - host: reporting.megcloud.space
+    - host: reporting.sikshasathi.tech
       http:
         paths:
           - path: /
